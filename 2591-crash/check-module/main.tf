@@ -1,10 +1,10 @@
 check "kafka_cluster_health" {
-  data "external" "kafka_cluster_health" {
-    program = ["bash", "${path.module}/check.sh"]
+  data "http" "terraform_io" {
+    url = "https://www.terraform.io"
   }
 
   assert {
-    condition     = data.external.kafka_cluster_health.result.status == "ready"
-    error_message = "not needed"
+    condition     = data.http.terraform_io.status_code == 200
+    error_message = "${data.http.terraform_io.url} returned an unhealthy status code"
   }
 }
