@@ -1,0 +1,10 @@
+{
+  "values": {
+    "id": {
+      "string": "my-simple-resource-0"
+    },
+    "string": {
+      "string": "test-0"
+    }
+  }
+}
