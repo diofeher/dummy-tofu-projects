@@ -7,8 +7,8 @@
 # }
 
 
-# data "azurerm_subscription" "primary" {
-# }
+data "azurerm_subscription" "primary" {
+}
 
 
 # data "azurerm_client_config" "example" {
@@ -105,7 +105,8 @@
 # }
 
 module "foo" {
-        source = "./foo"
-        foo = "magic"
-        other = "something3"
+  count        = 3
+  source       = "./foo"
+  foo          = "magic"
+  cluster_name = "something5"
 }

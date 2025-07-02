@@ -1,0 +1,30 @@
+module "aws" {
+  source = "./mod"
+
+  providers = {
+    aws.this = aws
+  }
+}
+
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+    }
+  }
+   required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "6.9.0"
+    }
+  }
+}
+
+variable "bucket_name" {
+  type    = string
+  default = "us-central1-a"
+}
+
+output "stuff" {
+  value = provider::google::region_from_zone(var.bucket_name) # requires update of the test's expectations
+}
