@@ -1,7 +1,7 @@
 module "grandchild" {
   source          = "./grandchild"
   unrelated_field = "unrelated_field"
-  # count  = 1
+  #   count           = 1
 
   # lifecycle {
   #   enabled = var.on
