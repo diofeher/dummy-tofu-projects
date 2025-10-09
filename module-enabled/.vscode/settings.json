@@ -1,0 +1,10 @@
+{
+    "go.goroot": "/Users/diogenesaherminio/.local/share/mise/installs/go/1.25.0",
+    "debug.javascript.defaultRuntimeExecutable": {
+        "pwa-node": "/Users/diogenesaherminio/.local/share/mise/shims/node"
+    },
+    "go.alternateTools": {
+        "go": "/Users/diogenesaherminio/.local/share/mise/shims/go",
+        "gopls": "/Users/diogenesaherminio/.local/share/mise/shims/gopls"
+    }
+}
