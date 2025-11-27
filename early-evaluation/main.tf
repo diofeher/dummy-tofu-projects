@@ -12,5 +12,5 @@ terraform {
 }
 
 module "sample_bucket" {
-  source = "./${var.module_name}"
+  source = "./modules/${var.module_name}"
 }
