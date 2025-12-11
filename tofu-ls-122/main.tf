@@ -49,3 +49,7 @@ resource "aws_s3_bucket" "example" {
   bucket = "example"
   bucket1 = "asdsad"
 }
+
+adesours
+asd
+sa 
